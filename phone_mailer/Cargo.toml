@@ -6,6 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+actix-web = "4"
 dotenv = "0.15.0"
 openapi = { path = "../../twilio-rust" }
+sendgrid = { version = "0.17.4", features = ['async'] }
 tokio = { version = "1.17.0", features = ["full"] }
