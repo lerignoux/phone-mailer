@@ -1,0 +1,9 @@
+version: "3.5"
+services:
+
+  phone_mailer:
+    container_name: phone_mailer
+    build:
+      context: ./
+    env_file:
+    - .env
