@@ -4,6 +4,8 @@ use std::env as env;
 use serde::Deserialize;
 use serde;
 
+mod sms_test;
+
 pub struct SmsDataError;
 
 #[derive(Deserialize)]
@@ -61,5 +63,5 @@ pub async fn send_sms(content:String) {
     Ok(result) => println!("Sms sent {:?}", result),
     Err(error) => panic!("Could not send sms, {:?}", error),
   };
-
+  
 }
