@@ -1,6 +1,8 @@
 use phone_mailer::api;
 use actix_web::{App, HttpServer};
 
+#[macro_use]
+extern crate fstrings;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {

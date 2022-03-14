@@ -11,3 +11,5 @@ dotenv = "0.15.0"
 openapi = { path = "../../twilio-rust" }
 sendgrid = { version = "0.17.4", features = ['async'] }
 tokio = { version = "1.17.0", features = ["full"] }
+fstrings = "0.2.3"
+serde = "1.0.136"

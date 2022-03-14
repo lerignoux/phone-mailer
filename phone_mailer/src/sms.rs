@@ -1,7 +1,24 @@
 use dotenv;
 use openapi::apis::{configuration::Configuration, default_api as twilio_api};
 use std::env as env;
+use serde::Deserialize;
+use serde;
 
+pub struct SmsDataError;
+
+#[derive(Deserialize)]
+#[serde(rename_all = "PascalCase")]
+pub struct SmsData {
+    pub body: String,
+    pub from: String,
+    pub to: String,
+    pub sms_status: String,
+    pub sms_sid: String,
+    pub sms_message_sid: String,
+    pub message_sid: String,
+    pub account_sid: String,
+    num_segments: u32
+}
 
 pub async fn send_sms(content:String) {
   // Securely import sensitive credentials and values from `.env` instead of inlining their values.
